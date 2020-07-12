@@ -27,6 +27,7 @@ class HostelController extends Controller
         return view ('Admin/hostel/hostel');
     }
 
+
     /**
      * Store a newly created resource in storage.
      *
@@ -35,7 +36,16 @@ class HostelController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $add_hostel = new Hostel;
+        $add_hostel->hostel_name= $request->hostel_name;
+        $add_hostel->room_number= $request->room_number;
+        $add_hostel->room_type=implode(',', $request->input('room_type'));
+        $add_hostel->number_of_bed=implode(',', $request->input('bed_in_room'));
+        $add_hostel->room_cost= $request->bed_cost;
+        $hostel=$add_hostel->save();
+        if($hostel){
+            return redirect()->back()->with('message','Hi There Thank You For adding New Room or Hostel');
+        }
     }
 
     /**

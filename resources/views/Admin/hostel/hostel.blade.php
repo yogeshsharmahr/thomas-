@@ -12,7 +12,13 @@
             </li>
             <li>Hostel</li>
         </ul>
+
     </div>
+    @if(session()->has('message'))
+    <div class="alert alert-success">
+        {{ session()->get('message') }}
+    </div>
+@endif
     <!-- Breadcubs Area End Here -->
     <div class="row">
         <!-- Add Room Area Start Here -->
@@ -37,38 +43,40 @@
                             </div>
                         </div>
                     </div>
-                    <form class="new-added-form">
+                    <form class="new-added-form" action="{{ route('add.room') }}" method="Post">
+                        @csrf
                         <div class="row">
                             <div class="col-12-xxxl col-lg-6 col-12 form-group">
                                 <label>Hostel Name</label>
-                                <input type="text" placeholder="" class="form-control">
+                                <input type="text" placeholder="" class="form-control"  name="hostel_name">
                             </div>
                             <div class="col-12-xxxl col-lg-6 col-12 form-group">
                                 <label>Room Number</label>
-                                <input type="text" placeholder="" class="form-control">
+                                <input type="text" placeholder="" class="form-control" name="room_number">
                             </div>
                             <div class="col-12-xxxl col-lg-6 col-12 form-group">
                                 <label>Room Type</label>
-                                <select class="select2">
-                                    <option value="">Please Select</option>
-                                    <option value="1">Big</option>
-                                    <option value="2">Medium</option>
-                                    <option value="3">Small</option>
+                                <select class="select2" name="room_type[]">
+                                    <option selected disabled>Please Select</option>
+                                    <option value="AC">AC</option>
+                                    <option value="Duplex">Duplex</option>
+                                    <option value="Non AC">Non AC</option>
                                 </select>
                             </div>
                             <div class="col-12-xxxl col-lg-6 col-12 form-group">
                                 <label>Number Of Bed</label>
-                                <select class="select2">
-                                    <option value="">Please Select</option>
-                                    <option value="1">02</option>
-                                    <option value="2">03</option>
-                                    <option value="3">04</option>
-                                    <option value="4">05</option>
+                                <select class="select2" name="bed_in_room[]">
+                                    <option selected disabled >Please Select</option>
+                                    <option value="1">01</option>
+                                    <option value="2">02</option>
+                                    <option value="3">03</option>
+                                    <option value="4">04</option>
+                                    <option value="5">05</option>
                                 </select>
                             </div>
                             <div class="col-12-xxxl col-lg-6 col-12 form-group">
                                 <label>Cost Per Bed</label>
-                                <input type="text" placeholder="$00.00" class="form-control">
+                                <input type="text" placeholder="RS 00.00" class="form-control" name="bed_cost">
                             </div>
                             <div class="col-12 form-group mg-t-8">
                                 <button type="submit" class="btn-fill-lg btn-gradient-yellow btn-hover-bluedark">Save</button>

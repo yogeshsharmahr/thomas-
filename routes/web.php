@@ -58,5 +58,5 @@ Route::get('/add/classes/','Admin\ClassController@OpenAdd_new_class_from')->name
 
 Route::get('all/users','Admin\UsersController@show_users')->name('all.users')->middleware('admin');
 //=================================Hostel =====================================
-Route::get('admin_by/hostel','Admin\HostelController@hostel_by_admin')->name('admin.hostel')->middleware('admin');
-
+Route::get('admin_by/hostel/','Admin\HostelController@hostel_by_admin')->name('admin.hostel')->middleware('admin');
+Route::post('admin/add_room/','Admin\HostelController@store')->name('add.room')->middleware('admin');

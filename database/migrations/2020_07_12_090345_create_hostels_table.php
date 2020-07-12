@@ -15,6 +15,11 @@ class CreateHostelsTable extends Migration
     {
         Schema::create('hostels', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('hostel_name');
+            $table->string('room_number');
+            $table->string('room_type');
+            $table->string('number_of_bed');
+            $table->float('room_cost');
             $table->timestamps();
         });
     }
