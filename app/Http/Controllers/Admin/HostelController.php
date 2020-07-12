@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\model\Hostel;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\DB;
 class HostelController extends Controller
 {
     /**
@@ -24,7 +24,8 @@ class HostelController extends Controller
      */
     public function hostel_by_admin()
     {
-        return view ('Admin/hostel/hostel');
+        $hostel =DB::table('hostels')->get();
+        return view ('Admin/hostel/hostel',compact('hostel'));
     }
 
 
@@ -37,7 +38,7 @@ class HostelController extends Controller
     public function store(Request $request)
     {
         $add_hostel = new Hostel;
-        $add_hostel->hostel_name= $request->hostel_name;
+        $add_hostel->hostel_name=implode(',', $request->input('Hostel_name'));
         $add_hostel->room_number= $request->room_number;
         $add_hostel->room_type=implode(',', $request->input('room_type'));
         $add_hostel->number_of_bed=implode(',', $request->input('bed_in_room'));

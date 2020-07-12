@@ -47,8 +47,16 @@
                         @csrf
                         <div class="row">
                             <div class="col-12-xxxl col-lg-6 col-12 form-group">
-                                <label>Hostel Name</label>
-                                <input type="text" placeholder="" class="form-control"  name="hostel_name">
+                                <label>Select Hostel</label>
+                                <select class="select2" name="Hostel_name[]">
+                                    <option selected disabled >Please Select</option>
+                                    <option value="BH-101">BH-101</option>
+                                    <option value="BH-102">BH-102</option>
+                                    <option value="BH-103">BH-103</option>
+                                    <option value="GH-201">GH-201</option>
+                                    <option value="GH-202">GH-202</option>
+
+                                </select>
                             </div>
                             <div class="col-12-xxxl col-lg-6 col-12 form-group">
                                 <label>Room Number</label>
@@ -145,17 +153,18 @@
                                 </tr>
                             </thead>
                             <tbody>
+                                @foreach($hostel as $hostel_detail)
                                 <tr>
                                     <td>
                                         <div class="form-check">
                                             <input type="checkbox" class="form-check-input">
-                                            <label class="form-check-label">Boys - 101</label>
+                                            <label class="form-check-label">{{ $hostel_detail->hostel_name }}</label>
                                         </div>
                                     </td>
-                                    <td>HT-3006</td>
-                                    <td>Big</td>
-                                    <td>03</td>
-                                    <td>$50.00</td>
+                                    <td>{{ $hostel_detail->room_number }}</td>
+                                    <td>{{ $hostel_detail->room_type }}</td>
+                                    <td>{{ $hostel_detail->number_of_bed }}</td>
+                                    <td>Rs :{{ $hostel_detail->room_cost}}</td>
                                     <td>
                                         <div class="dropdown">
                                             <a href="#" class="dropdown-toggle" data-toggle="dropdown"
@@ -173,7 +182,7 @@
                                         </div>
                                     </td>
                                 </tr>
-
+                                @endforeach
                             </tbody>
                         </table>
                     </div>
