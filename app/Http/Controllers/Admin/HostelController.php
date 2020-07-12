@@ -24,7 +24,7 @@ class HostelController extends Controller
      */
     public function hostel_by_admin()
     {
-        $hostel =DB::table('hostels')->get();
+        $hostel =DB::table('hostels')->paginate(3);
         return view ('Admin/hostel/hostel',compact('hostel'));
     }
 

@@ -185,6 +185,7 @@
                                 @endforeach
                             </tbody>
                         </table>
+                        {{ $hostel->links() }}
                     </div>
                 </div>
             </div>
