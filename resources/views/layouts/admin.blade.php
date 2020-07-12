@@ -30,19 +30,19 @@
     <link rel="stylesheet" href="{{ asset('/public/admin/css/jquery.dataTables.min.css') }}">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{{ asset('/public/admin/style.css') }}">
-    
+
     <!-- Modernize js -->
     <script src="{{ asset('/public/admin/js/modernizr-3.6.0.min.js') }}"></script>
 
 
    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    
+
 
 </head>
 <body>
 
-                     
+
 
         	 <!-- Preloader Start Here -->
     <div id="preloader"></div>
@@ -142,11 +142,11 @@
                                     <div class="media-body space-sm">
                                         <div class="item-title">
                                             <a href="#">
-                                                <span class="item-name">Maria Zaman</span> 
-                                                <span class="item-time">18:30</span> 
-                                            </a>  
+                                                <span class="item-name">Maria Zaman</span>
+                                                <span class="item-time">18:30</span>
+                                            </a>
                                         </div>
-                                        <p>What is the reason of buy this item. 
+                                        <p>What is the reason of buy this item.
                                         Is it usefull for me.....</p>
                                     </div>
                                 </div>
@@ -157,11 +157,11 @@
                                     <div class="media-body space-sm">
                                         <div class="item-title">
                                             <a href="#">
-                                                <span class="item-name">Benny Roy</span> 
-                                                <span class="item-time">10:35</span> 
-                                            </a>  
+                                                <span class="item-name">Benny Roy</span>
+                                                <span class="item-time">10:35</span>
+                                            </a>
                                         </div>
-                                        <p>What is the reason of buy this item. 
+                                        <p>What is the reason of buy this item.
                                         Is it usefull for me.....</p>
                                     </div>
                                 </div>
@@ -172,11 +172,11 @@
                                     <div class="media-body space-sm">
                                         <div class="item-title">
                                             <a href="#">
-                                                <span class="item-name">Steven</span> 
-                                                <span class="item-time">02:35</span> 
-                                            </a>  
+                                                <span class="item-name">Steven</span>
+                                                <span class="item-time">02:35</span>
+                                            </a>
                                         </div>
-                                        <p>What is the reason of buy this item. 
+                                        <p>What is the reason of buy this item.
                                         Is it usefull for me.....</p>
                                     </div>
                                 </div>
@@ -187,11 +187,11 @@
                                     <div class="media-body space-sm">
                                         <div class="item-title">
                                             <a href="#">
-                                                <span class="item-name">Joshep Joe</span> 
-                                                <span class="item-time">12:35</span> 
-                                            </a>  
+                                                <span class="item-name">Joshep Joe</span>
+                                                <span class="item-time">12:35</span>
+                                            </a>
                                         </div>
-                                        <p>What is the reason of buy this item. 
+                                        <p>What is the reason of buy this item.
                                         Is it usefull for me.....</p>
                                     </div>
                                 </div>
@@ -242,7 +242,7 @@
                         </div>
                     </li>
                      <li class="navbar-item dropdown header-language">
-                        <a class="navbar-nav-link dropdown-toggle" href="#" role="button" 
+                        <a class="navbar-nav-link dropdown-toggle" href="#" role="button"
                         data-toggle="dropdown" aria-expanded="false"><i class="fas fa-globe-americas"></i>EN</a>
                         <div class="dropdown-menu dropdown-menu-right">
                             <a class="dropdown-item" href="#">English</a>
@@ -398,7 +398,7 @@
                                 </li>
                             </ul>
                         </li>
-                        
+
                         <li class="nav-item sidebar-nav-item">
                             <a href="#" class="nav-link"><i class="flaticon-technological"></i><span>Acconunt</span></a>
                             <ul class="nav sub-group-menu">
@@ -471,7 +471,7 @@
                                         Class</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="add-class.html" class="nav-link"><i class="fas fa-angle-right"></i>Add 
+                                    <a href="add-class.html" class="nav-link"><i class="fas fa-angle-right"></i>Add
                                         Seminar</a>
                                 </li>
                                 <li class="nav-item">
@@ -505,7 +505,7 @@
                                 </li>
                             </ul>
                         </li>
-                        
+
                         <li class="nav-item sidebar-nav-item">
                             <a href="#" class="nav-link"><i class="flaticon-checklist"></i><span>Attendance</span></a>
                             <ul class="nav sub-group-menu">
@@ -540,7 +540,7 @@
                             <a href="#" class="nav-link"><i class="fa fa-bed "></i><span>Hostel</span></a>
                             <ul class="nav sub-group-menu">
                                 <li class="nav-item">
-                                   <a href="exam-schedule.html" class="nav-link"><i class="fas fa-angle-right"></i>
+                                   <a href="{{ route('admin.hostel') }}" class="nav-link"><i class="fas fa-angle-right"></i>
                                         All Room</a>
                                 </li>
                                 <li class="nav-item">
