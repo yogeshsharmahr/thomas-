@@ -60,7 +60,7 @@
                             </div>
                             <div class="col-12-xxxl col-lg-6 col-12 form-group">
                                 <label>Room Number</label>
-                                <input type="text" placeholder="" class="form-control" name="room_number">
+                                <input type="text" placeholder="HT-Room Number" class="form-control" name="room_number">
                             </div>
                             <div class="col-12-xxxl col-lg-6 col-12 form-group">
                                 <label>Room Type</label>
@@ -118,16 +118,16 @@
                             </div>
                         </div>
                     </div>
-                    <form class="mg-b-20">
+                    <form class="mg-b-20" action="" method="post">
                         <div class="row gutters-8">
                             <div class="col-lg-4 col-12 form-group">
-                                <input type="text" placeholder="Search by Hostel ..." class="form-control">
+                                <input type="text" placeholder="Search by Hostel " name="name" class="form-control">
                             </div>
                             <div class="col-lg-3 col-12 form-group">
-                                <input type="text" placeholder="Search by Room ..." class="form-control">
+                                <input type="text" placeholder="Search by Room ..." name="room" class="form-control">
                             </div>
                             <div class="col-lg-3 col-12 form-group">
-                                <input type="text" placeholder="Search by Bed ..." class="form-control">
+                                <input type="text" placeholder="Search by Bed ..." name="bed" class="form-control">
                             </div>
                             <div class="col-lg-2 col-12 form-group">
                                 <button type="submit"
@@ -174,7 +174,7 @@
                                             <div class="dropdown-menu dropdown-menu-right">
                                                 <a class="dropdown-item" href="#"><i
                                                         class="fas fa-times text-orange-red"></i>Close</a>
-                                                <a class="dropdown-item" href="#"><i
+                                                <a class="dropdown-item" href="{{url('/admin_by/hostel/') }}/{{ $hostel_detail->id }}"><i
                                                         class="fas fa-cogs text-dark-pastel-green"></i>Edit</a>
                                                 <a class="dropdown-item" href="#"><i
                                                         class="fas fa-redo-alt text-orange-peel"></i>Refresh</a>
