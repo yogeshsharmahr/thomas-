@@ -11787,3 +11787,22 @@ Did you mean this?
 #59 C:\\xampp\\htdocs\\thomas\\index.php(21): require_once('C:\\\\xampp\\\\htdocs...')
 #60 {main}
 "} 
+[2020-07-13 10:48:16] local.ERROR: include(C:\xampp\htdocs\thomas-\vendor\composer/../laravel/ui/src/UiServiceProvider.php): failed to open stream: No such file or directory {"exception":"[object] (ErrorException(code: 0): include(C:\\xampp\\htdocs\\thomas-\\vendor\\composer/../laravel/ui/src/UiServiceProvider.php): failed to open stream: No such file or directory at C:\\xampp\\htdocs\\thomas-\\vendor\\composer\\ClassLoader.php:444)
+[stacktrace]
+#0 C:\\xampp\\htdocs\\thomas-\\vendor\\composer\\ClassLoader.php(444): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(2, 'include(C:\\\\xamp...', 'C:\\\\xampp\\\\htdocs...', 444, Array)
+#1 C:\\xampp\\htdocs\\thomas-\\vendor\\composer\\ClassLoader.php(444): include()
+#2 C:\\xampp\\htdocs\\thomas-\\vendor\\composer\\ClassLoader.php(322): Composer\\Autoload\\includeFile('C:\\\\xampp\\\\htdocs...')
+#3 [internal function]: Composer\\Autoload\\ClassLoader->loadClass('Laravel\\\\Ui\\\\UiSe...')
+#4 C:\\xampp\\htdocs\\thomas-\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\ProviderRepository.php(208): spl_autoload_call('Laravel\\\\Ui\\\\UiSe...')
+#5 C:\\xampp\\htdocs\\thomas-\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\ProviderRepository.php(144): Illuminate\\Foundation\\ProviderRepository->createProvider('Laravel\\\\Ui\\\\UiSe...')
+#6 C:\\xampp\\htdocs\\thomas-\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\ProviderRepository.php(61): Illuminate\\Foundation\\ProviderRepository->compileManifest(Array)
+#7 C:\\xampp\\htdocs\\thomas-\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(593): Illuminate\\Foundation\\ProviderRepository->load(Array)
+#8 C:\\xampp\\htdocs\\thomas-\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\RegisterProviders.php(17): Illuminate\\Foundation\\Application->registerConfiguredProviders()
+#9 C:\\xampp\\htdocs\\thomas-\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(219): Illuminate\\Foundation\\Bootstrap\\RegisterProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#10 C:\\xampp\\htdocs\\thomas-\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(156): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#11 C:\\xampp\\htdocs\\thomas-\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(140): Illuminate\\Foundation\\Http\\Kernel->bootstrap()
+#12 C:\\xampp\\htdocs\\thomas-\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(110): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#13 C:\\xampp\\htdocs\\thomas-\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#14 C:\\xampp\\htdocs\\thomas-\\index.php(21): require_once('C:\\\\xampp\\\\htdocs...')
+#15 {main}
+"} 
